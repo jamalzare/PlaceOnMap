@@ -11,7 +11,6 @@ import UIKit
 
 extension UIView {
     
-    
     enum anchorType {
         case top
         case bottom
