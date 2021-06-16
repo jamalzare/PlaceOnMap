@@ -6,12 +6,20 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
+    
+    let mapView = MKMapView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setup()
+    }
+    
+    func setup() {
+        view.addSubview(mapView)
+        mapView.alignToSuperView(fillWithPadding: 0)
     }
 
 

@@ -15,6 +15,7 @@
 		89DA2D29267A1F7C004C740D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DA2D27267A1F7C004C740D /* LaunchScreen.storyboard */; };
 		89DA2D34267A1F7C004C740D /* PlaceOnMapAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D33267A1F7C004C740D /* PlaceOnMapAppTests.swift */; };
 		89DA2D3F267A1F7C004C740D /* PlaceOnMapAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D3E267A1F7C004C740D /* PlaceOnMapAppUITests.swift */; };
+		89DA2D59267A2555004C740D /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D58267A2555004C740D /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		89DA2D3A267A1F7C004C740D /* PlaceOnMapAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceOnMapAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DA2D3E267A1F7C004C740D /* PlaceOnMapAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOnMapAppUITests.swift; sourceTree = "<group>"; };
 		89DA2D40267A1F7C004C740D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89DA2D58267A2555004C740D /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,9 @@
 		89DA2D1B267A1F76004C740D /* PlaceOnMapApp */ = {
 			isa = PBXGroup;
 			children = (
-				89DA2D1C267A1F76004C740D /* AppDelegate.swift */,
-				89DA2D1E267A1F76004C740D /* SceneDelegate.swift */,
+				89DA2D57267A24FF004C740D /* Extensions */,
+				89DA2D50267A2477004C740D /* Support */,
 				89DA2D20267A1F76004C740D /* ViewController.swift */,
-				89DA2D22267A1F76004C740D /* Main.storyboard */,
-				89DA2D25267A1F7C004C740D /* Assets.xcassets */,
-				89DA2D27267A1F7C004C740D /* LaunchScreen.storyboard */,
-				89DA2D2A267A1F7C004C740D /* Info.plist */,
 			);
 			path = PlaceOnMapApp;
 			sourceTree = "<group>";
@@ -126,6 +124,27 @@
 				89DA2D40267A1F7C004C740D /* Info.plist */,
 			);
 			path = PlaceOnMapAppUITests;
+			sourceTree = "<group>";
+		};
+		89DA2D50267A2477004C740D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				89DA2D27267A1F7C004C740D /* LaunchScreen.storyboard */,
+				89DA2D22267A1F76004C740D /* Main.storyboard */,
+				89DA2D1C267A1F76004C740D /* AppDelegate.swift */,
+				89DA2D1E267A1F76004C740D /* SceneDelegate.swift */,
+				89DA2D2A267A1F7C004C740D /* Info.plist */,
+				89DA2D25267A1F7C004C740D /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		89DA2D57267A24FF004C740D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				89DA2D58267A2555004C740D /* UIView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +279,7 @@
 			files = (
 				89DA2D21267A1F76004C740D /* ViewController.swift in Sources */,
 				89DA2D1D267A1F76004C740D /* AppDelegate.swift in Sources */,
+				89DA2D59267A2555004C740D /* UIView+Ext.swift in Sources */,
 				89DA2D1F267A1F76004C740D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +458,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4RS983B9Z;
-				INFOPLIST_FILE = PlaceOnMapApp/Info.plist;
+				INFOPLIST_FILE = PlaceOnMapApp/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +477,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4RS983B9Z;
-				INFOPLIST_FILE = PlaceOnMapApp/Info.plist;
+				INFOPLIST_FILE = PlaceOnMapApp/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
