@@ -16,6 +16,7 @@ class PlacesNavigationControllerComposer {
         
         let presenter = PlacesPresenter()
         let viewController = PlacesViewController(presenter: presenter)
+        presenter.delegate = viewController
         
         navigationControlller.viewControllers = [viewController]
         navigationControlller.navigationBar.prefersLargeTitles = true

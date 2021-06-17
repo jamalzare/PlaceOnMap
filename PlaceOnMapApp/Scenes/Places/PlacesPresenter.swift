@@ -24,8 +24,11 @@ class PlacesPresenter: PlacesPresenterInterface {
         return list[indexPath.item]
     }
     
-    func didSelect(place: Place) {
-        delegate.navigateTo(next: UIViewController())
+    func didSelect(item atIndexPath: IndexPath) {
+        
+        let view = PlaceDetailViewControllerComposer.makeModule()
+        view.presenter.place = model(at: atIndexPath)
+        delegate.navigateTo(next: view)
     }
     
 }

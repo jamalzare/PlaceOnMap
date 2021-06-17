@@ -18,6 +18,11 @@
 		891FFDF0267B62FA00254B9C /* MainPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FFDEF267B62FA00254B9C /* MainPresenterInterface.swift */; };
 		891FFDF5267B631000254B9C /* MainPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FFDF4267B631000254B9C /* MainPresenterDelegate.swift */; };
 		891FFDFA267B632500254B9C /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FFDF9267B632500254B9C /* MainPresenter.swift */; };
+		89A5A882267BADE400F94E95 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A881267BADE400F94E95 /* PlaceDetailViewController.swift */; };
+		89A5A887267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A886267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift */; };
+		89A5A88C267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A88B267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift */; };
+		89A5A891267BAE2300F94E95 /* PlaceDetailPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A890267BAE2300F94E95 /* PlaceDetailPresenterDelegate.swift */; };
+		89A5A896267BAE2900F94E95 /* PlaceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A895267BAE2900F94E95 /* PlaceDetailPresenter.swift */; };
 		89CE1537267B6C0400EE596F /* MainViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE1536267B6C0400EE596F /* MainViewControllerComposer.swift */; };
 		89CE153F267B6EA500EE596F /* PlacesPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE153E267B6EA500EE596F /* PlacesPresenterInterface.swift */; };
 		89CE1547267B6EBB00EE596F /* PlacesPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE1546267B6EBB00EE596F /* PlacesPresenterDelegate.swift */; };
@@ -67,6 +72,11 @@
 		891FFDEF267B62FA00254B9C /* MainPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterInterface.swift; sourceTree = "<group>"; };
 		891FFDF4267B631000254B9C /* MainPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterDelegate.swift; sourceTree = "<group>"; };
 		891FFDF9267B632500254B9C /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		89A5A881267BADE400F94E95 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		89A5A886267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewControllerComposer.swift; sourceTree = "<group>"; };
+		89A5A88B267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPresenterInterface.swift; sourceTree = "<group>"; };
+		89A5A890267BAE2300F94E95 /* PlaceDetailPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPresenterDelegate.swift; sourceTree = "<group>"; };
+		89A5A895267BAE2900F94E95 /* PlaceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPresenter.swift; sourceTree = "<group>"; };
 		89CE1536267B6C0400EE596F /* MainViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerComposer.swift; sourceTree = "<group>"; };
 		89CE153E267B6EA500EE596F /* PlacesPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPresenterInterface.swift; sourceTree = "<group>"; };
 		89CE1546267B6EBB00EE596F /* PlacesPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPresenterDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +180,11 @@
 		89CE1550267B78C800EE596F /* PlaceDetail */ = {
 			isa = PBXGroup;
 			children = (
+				89A5A886267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift */,
+				89A5A881267BADE400F94E95 /* PlaceDetailViewController.swift */,
+				89A5A88B267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift */,
+				89A5A890267BAE2300F94E95 /* PlaceDetailPresenterDelegate.swift */,
+				89A5A895267BAE2900F94E95 /* PlaceDetailPresenter.swift */,
 			);
 			path = PlaceDetail;
 			sourceTree = "<group>";
@@ -422,12 +437,15 @@
 				89F14863267A727A00C382E4 /* NetworkLoader.swift in Sources */,
 				89CE1547267B6EBB00EE596F /* PlacesPresenterDelegate.swift in Sources */,
 				89F1485B267A711600C382E4 /* NetworkError.swift in Sources */,
+				89A5A88C267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift in Sources */,
 				891FFDBE267B502400254B9C /* Place.swift in Sources */,
 				891FFDAA267B285800254B9C /* URLRequest+Ext.swift in Sources */,
 				89DA2D70267A6040004C740D /* Images.swift in Sources */,
 				891FFDDF267B5DB700254B9C /* PlacesNavigationControllerComposer.swift in Sources */,
 				89DA2D1D267A1F76004C740D /* AppDelegate.swift in Sources */,
 				89DA2D59267A2555004C740D /* UIView+Ext.swift in Sources */,
+				89A5A896267BAE2900F94E95 /* PlaceDetailPresenter.swift in Sources */,
+				89A5A891267BAE2300F94E95 /* PlaceDetailPresenterDelegate.swift in Sources */,
 				89F14856267A70B800C382E4 /* NetworkLoaderProvider.swift in Sources */,
 				89DA2D1F267A1F76004C740D /* SceneDelegate.swift in Sources */,
 				891FFDCC267B56C300254B9C /* PlaceServiceProvider.swift in Sources */,
@@ -439,6 +457,8 @@
 				891FFDF0267B62FA00254B9C /* MainPresenterInterface.swift in Sources */,
 				89F14838267A64ED00C382E4 /* Strings.swift in Sources */,
 				891FFDC6267B552000254B9C /* ApiErroModel.swift in Sources */,
+				89A5A882267BADE400F94E95 /* PlaceDetailViewController.swift in Sources */,
+				89A5A887267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift in Sources */,
 				891FFDFA267B632500254B9C /* MainPresenter.swift in Sources */,
 				891FFDAF267B29FE00254B9C /* WebApies.swift in Sources */,
 			);
@@ -546,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -601,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

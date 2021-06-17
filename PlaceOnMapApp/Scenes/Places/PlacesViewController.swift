@@ -48,6 +48,14 @@ class PlacesViewController: UITableViewController {
     }
 }
 
+extension PlacesViewController: PlacesPresenterDelegate {
+    
+    func navigateTo(next view: UIViewController) {
+        navigationController?.pushViewController(view, animated: true)
+    }
+    
+}
+
 extension PlacesViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,5 +73,8 @@ extension PlacesViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelect(item: indexPath)
+    }
     
 }

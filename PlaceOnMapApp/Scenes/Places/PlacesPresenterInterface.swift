@@ -16,6 +16,6 @@ protocol PlacesPresenterInterface {
     
     func model(at indexPath: IndexPath) -> Place
     
-    func didSelect(place: Place)
+    func didSelect(item atIndexPath: IndexPath)
     
 }
