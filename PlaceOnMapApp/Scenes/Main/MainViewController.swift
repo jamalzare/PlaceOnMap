@@ -8,7 +8,9 @@
 import UIKit
 import MapKit
 
-class PlaceViewController: UIViewController {
+class MainViewController: UIViewController {
+    
+    let presenter: MainPresenterInterface
     
     private let mapView = MKMapView()
     private let pinViewWidth: CGFloat = 40
@@ -32,9 +34,21 @@ class PlaceViewController: UIViewController {
         return btn
     }()
     
+    
+    init(presenter: MainPresenterInterface) {
+        
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -61,10 +75,20 @@ class PlaceViewController: UIViewController {
     
     @objc func confirmBtnDidTap() {
         
-        print("lat:\(mapView.centerCoordinate.latitude) long:\(mapView.centerCoordinate.longitude)")
-     
+        let coordinate = (lat: mapView.centerCoordinate.latitude, long: mapView.centerCoordinate.longitude)
+        presenter.locationDidSelect(with: coordinate)
     }
     
+}
+
+extension MainViewController: MainPresenterDelegate {
     
+    func alert(message: String) {
+        print("message")
+    }
+    
+    func present(next view: UIViewController) {
+        present(view, animated: true, completion: nil)
+    }
 }
 
