@@ -12,7 +12,7 @@ class PlaceOnMapAppTests: XCTestCase {
     
     
     var sut: NetworkLoader! // sut: system under test
-    private let request = URLRequest.createRequest(url: "http://www.randomnumberapi.com/test", type: "GET")
+    private let request = URLRequest.createRequest(url: "https://postman-echo.com/get?test=123", type: "GET")
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -54,6 +54,7 @@ class PlaceOnMapAppTests: XCTestCase {
             }
         }
         
+        wait(for: [promise], timeout: 10)
     }
     
     func testApiCallCompletes() throws {
@@ -115,5 +116,116 @@ class PlaceOnMapAppTests: XCTestCase {
     }
     
     
+    func testResponseData() throws {
+        
+        let promise = expectation(description: "Api call has response data")
+        let request = URLRequest.createRequest(url: "https://postman-echo.com/time/now", type: "GET")
+        
+        sut.loadRequest(request: request,
+                        identifier: "testApi",
+                        timeout: 10) { result in
+            
+            
+            switch result {
+            
+            case .failure(let error):
+                
+                XCTFail("Error: \(error.localizedDescription)")
+                return
+                
+            case .success(let response):
+                if response.data.count > 0 {
+                    promise.fulfill()
+                    
+                } else{
+                    XCTFail("There is no response data")
+                }
+                
+                
+            }
+        }
+        
+        wait(for: [promise], timeout: 10)
+    }
     
+    func testHTTPMethodPostTypeWithParamters() throws {
+        
+        let promise = expectation(description: "Testing Post Method")
+        
+        let params = [
+            "parama1": 1,
+            "string": "Something",
+            "another": "everything"
+        ] as [String : Any]
+        let request = URLRequest.createRequest(url: "https://postman-echo.com/post",
+                                               type: "POST",
+                                               params: params)
+        
+        sut.loadRequest(request: request,
+                        identifier: "testApi",
+                        timeout: 10) { result in
+            
+            
+            switch result {
+            
+            case .failure(let error):
+                
+                XCTFail("Error: \(error.localizedDescription)")
+                return
+                
+            case .success(let response):
+                if response.data.count > 0 {
+                    promise.fulfill()
+                    
+                } else{
+                    XCTFail("There is no response data")
+                }
+                
+                
+            }
+        }
+        
+        wait(for: [promise], timeout: 10)
+    }
+    
+    
+    func testApiCallWithHeaders() throws {
+        
+        let promise = expectation(description: "Testing Api Call with Headers")
+        
+        let headers = [
+            "my-sample-header":"Just for test",
+        ]
+        
+        
+        let request = URLRequest.createRequest(url: "https://postman-echo.com/headers",
+                                               type: "Get",
+                                               headers: headers)
+        
+        sut.loadRequest(request: request,
+                        identifier: "testApi",
+                        timeout: 10) { result in
+            
+            
+            switch result {
+            
+            case .failure(let error):
+                
+                XCTFail("Error: \(error.localizedDescription)")
+                return
+                
+            case .success(let response):
+                if response.data.count > 0 {
+                    promise.fulfill()
+                    
+                } else{
+                    XCTFail("There is no response data")
+                }
+                
+                
+            }
+        }
+        
+        wait(for: [promise], timeout: 10)
+    }
 }
