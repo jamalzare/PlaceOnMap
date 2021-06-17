@@ -17,12 +17,21 @@ public struct NetworkError: Error, LocalizedError {
         self.identifier = identifier
     }
     
-    public enum ErrorKind {
+    public enum ErrorKind: Equatable {
+        
         case invalidUrl
         case connectionError
         case invalidRequest
         case invalidStatusCode(Int, Any? = nil)
         case invalidResponse(Data?)
+        
+        var value: String? {
+               return String(describing: self).components(separatedBy: "(").first
+        }
+        
+        public static func == (lhs: NetworkError.ErrorKind, rhs: NetworkError.ErrorKind) -> Bool {
+            return lhs.value == rhs.value
+        }
     }
     
     public var errorDescription: String? {
