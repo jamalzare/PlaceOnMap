@@ -13,7 +13,7 @@ class PlacesPresenter: PlacesPresenterInterface {
     weak var delegate: PlacesPresenterDelegate!
     
     var numberOfSections: Int {
-        0
+        1
     }
     
     func numberOfRowsInSection(at index: Int) -> Int {

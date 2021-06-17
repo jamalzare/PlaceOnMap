@@ -55,6 +55,10 @@ class MainViewController: UIViewController {
         super.viewDidLayoutSubviews()
         design()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        confirmBtnDidTap()
+    }
     
     private func setup() {
         

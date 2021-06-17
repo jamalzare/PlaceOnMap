@@ -10,5 +10,7 @@ import Foundation
 struct Strings {
     
     static let confirm = "Confirm"
+    static let dismiss = "Dismiss"
+    static let placesTitle = "Nearby Places"
     
 }

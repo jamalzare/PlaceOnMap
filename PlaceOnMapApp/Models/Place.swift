@@ -8,6 +8,11 @@
 import Foundation
 
 struct Place: Decodable {
+    let name: String
+}
+
+
+struct Place1: Decodable {
     
     let latitude: Double
     let longitude: Double

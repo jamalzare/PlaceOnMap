@@ -10,7 +10,7 @@ import UIKit
 
 class PlacesViewController: UITableViewController {
     
-    let presenter: PlacesPresenterInterface
+    var presenter: PlacesPresenterInterface
     
     private let cellId = "cellId"
     
@@ -27,8 +27,24 @@ class PlacesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
-        tableView.backgroundColor = .red
+        setup()
+    }
+    
+    func setup() {
+        
+        title = Strings.placesTitle
+        
+        let dismissBtn = UIBarButtonItem()
+        dismissBtn.title = Strings.dismiss
+        navigationItem.leftBarButtonItem = dismissBtn
+        dismissBtn.target = self
+        dismissBtn.action = #selector(dismissBtnDidTap)
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+    }
+    
+    @objc func dismissBtnDidTap() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -45,7 +61,9 @@ extension PlacesViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = UIColor.white
+        cell.textLabel?.text = presenter.model(at: indexPath).name
         return cell
     }
+    
+    
 }

@@ -9,6 +9,7 @@ import Foundation
 
 protocol PlacesPresenterInterface {
     
+    var list: [Place] { get set }
     var numberOfSections: Int { get }
     
     func numberOfRowsInSection(at index: Int) -> Int
