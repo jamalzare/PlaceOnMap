@@ -9,6 +9,8 @@ import UIKit
 
 protocol MainPresenterDelegate: class {
     
+//    func presenterDidLoadPlaces(_: MainPresenterInterface, list: [Place], error: Error?, message: String?)
+    
     func alert(message: String)
     func present(next view: UIViewController)
     

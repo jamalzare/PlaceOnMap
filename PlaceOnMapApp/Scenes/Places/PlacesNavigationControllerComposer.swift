@@ -13,7 +13,10 @@ class PlacesNavigationControllerComposer {
     static func makeModule() -> (UINavigationController, PlacesViewController) {
 
         let navigationControlller = UINavigationController()
-        let viewController = PlacesViewController()
+        
+        let presenter = PlacesPresenter()
+        let viewController = PlacesViewController(presenter: presenter)
+        
         navigationControlller.viewControllers = [viewController]
         navigationControlller.navigationBar.prefersLargeTitles = true
         

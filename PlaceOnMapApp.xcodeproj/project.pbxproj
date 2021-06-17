@@ -20,6 +20,9 @@
 		891FFDF5267B631000254B9C /* MainPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FFDF4267B631000254B9C /* MainPresenterDelegate.swift */; };
 		891FFDFA267B632500254B9C /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FFDF9267B632500254B9C /* MainPresenter.swift */; };
 		89CE1537267B6C0400EE596F /* MainViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE1536267B6C0400EE596F /* MainViewControllerComposer.swift */; };
+		89CE153F267B6EA500EE596F /* PlacesPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE153E267B6EA500EE596F /* PlacesPresenterInterface.swift */; };
+		89CE1547267B6EBB00EE596F /* PlacesPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE1546267B6EBB00EE596F /* PlacesPresenterDelegate.swift */; };
+		89CE154C267B6ECF00EE596F /* PlacesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CE154B267B6ECF00EE596F /* PlacesPresenter.swift */; };
 		89DA2D1D267A1F76004C740D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D1C267A1F76004C740D /* AppDelegate.swift */; };
 		89DA2D1F267A1F76004C740D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D1E267A1F76004C740D /* SceneDelegate.swift */; };
 		89DA2D21267A1F76004C740D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D20267A1F76004C740D /* MainViewController.swift */; };
@@ -67,6 +70,9 @@
 		891FFDF4267B631000254B9C /* MainPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterDelegate.swift; sourceTree = "<group>"; };
 		891FFDF9267B632500254B9C /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		89CE1536267B6C0400EE596F /* MainViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerComposer.swift; sourceTree = "<group>"; };
+		89CE153E267B6EA500EE596F /* PlacesPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPresenterInterface.swift; sourceTree = "<group>"; };
+		89CE1546267B6EBB00EE596F /* PlacesPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPresenterDelegate.swift; sourceTree = "<group>"; };
+		89CE154B267B6ECF00EE596F /* PlacesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesPresenter.swift; sourceTree = "<group>"; };
 		89DA2D19267A1F76004C740D /* PlaceOnMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceOnMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DA2D1C267A1F76004C740D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89DA2D1E267A1F76004C740D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +150,9 @@
 			children = (
 				891FFDDE267B5DB700254B9C /* PlacesNavigationControllerComposer.swift */,
 				891FFDD8267B5C9500254B9C /* PlacesViewController.swift */,
+				89CE153E267B6EA500EE596F /* PlacesPresenterInterface.swift */,
+				89CE1546267B6EBB00EE596F /* PlacesPresenterDelegate.swift */,
+				89CE154B267B6ECF00EE596F /* PlacesPresenter.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -158,6 +167,13 @@
 				891FFDF9267B632500254B9C /* MainPresenter.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		89CE1550267B78C800EE596F /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlaceDetail;
 			sourceTree = "<group>";
 		};
 		89DA2D10267A1F76004C740D = {
@@ -239,6 +255,7 @@
 			children = (
 				891FFDEE267B62A200254B9C /* Main */,
 				891FFDDD267B5D8D00254B9C /* Places */,
+				89CE1550267B78C800EE596F /* PlaceDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -406,6 +423,7 @@
 				89DA2D21267A1F76004C740D /* MainViewController.swift in Sources */,
 				891FFDD4267B57B200254B9C /* PlaceService.swift in Sources */,
 				89F14863267A727A00C382E4 /* NetworkLoader.swift in Sources */,
+				89CE1547267B6EBB00EE596F /* PlacesPresenterDelegate.swift in Sources */,
 				89F1485B267A711600C382E4 /* NetworkError.swift in Sources */,
 				891FFDBE267B502400254B9C /* Place.swift in Sources */,
 				891FFDAA267B285800254B9C /* URLRequest+Ext.swift in Sources */,
@@ -417,8 +435,10 @@
 				891FFDE7267B61AD00254B9C /* BKCODES.swift in Sources */,
 				89DA2D1F267A1F76004C740D /* SceneDelegate.swift in Sources */,
 				891FFDCC267B56C300254B9C /* PlaceServiceProvider.swift in Sources */,
+				89CE154C267B6ECF00EE596F /* PlacesPresenter.swift in Sources */,
 				89CE1537267B6C0400EE596F /* MainViewControllerComposer.swift in Sources */,
 				891FFDF5267B631000254B9C /* MainPresenterDelegate.swift in Sources */,
+				89CE153F267B6EA500EE596F /* PlacesPresenterInterface.swift in Sources */,
 				891FFDD9267B5C9500254B9C /* PlacesViewController.swift in Sources */,
 				891FFDF0267B62FA00254B9C /* MainPresenterInterface.swift in Sources */,
 				89F14838267A64ED00C382E4 /* Strings.swift in Sources */,
