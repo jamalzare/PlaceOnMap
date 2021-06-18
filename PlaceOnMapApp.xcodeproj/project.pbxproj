@@ -18,6 +18,7 @@
 		891FFDF0267B62FA00254B9C /* MainPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FFDEF267B62FA00254B9C /* MainPresenterInterface.swift */; };
 		891FFDF5267B631000254B9C /* MainPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FFDF4267B631000254B9C /* MainPresenterDelegate.swift */; };
 		891FFDFA267B632500254B9C /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FFDF9267B632500254B9C /* MainPresenter.swift */; };
+		8945F0EA267BE3150060BFB7 /* PlaceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945F0E9267BE3150060BFB7 /* PlaceServiceTests.swift */; };
 		89A5A882267BADE400F94E95 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A881267BADE400F94E95 /* PlaceDetailViewController.swift */; };
 		89A5A887267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A886267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift */; };
 		89A5A88C267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A88B267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift */; };
@@ -33,7 +34,7 @@
 		89DA2D24267A1F76004C740D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DA2D22267A1F76004C740D /* Main.storyboard */; };
 		89DA2D26267A1F7C004C740D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89DA2D25267A1F7C004C740D /* Assets.xcassets */; };
 		89DA2D29267A1F7C004C740D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89DA2D27267A1F7C004C740D /* LaunchScreen.storyboard */; };
-		89DA2D34267A1F7C004C740D /* PlaceOnMapAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D33267A1F7C004C740D /* PlaceOnMapAppTests.swift */; };
+		89DA2D34267A1F7C004C740D /* NetworkloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D33267A1F7C004C740D /* NetworkloaderTests.swift */; };
 		89DA2D3F267A1F7C004C740D /* PlaceOnMapAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D3E267A1F7C004C740D /* PlaceOnMapAppUITests.swift */; };
 		89DA2D59267A2555004C740D /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D58267A2555004C740D /* UIView+Ext.swift */; };
 		89DA2D70267A6040004C740D /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DA2D6F267A6040004C740D /* Images.swift */; };
@@ -72,6 +73,7 @@
 		891FFDEF267B62FA00254B9C /* MainPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterInterface.swift; sourceTree = "<group>"; };
 		891FFDF4267B631000254B9C /* MainPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterDelegate.swift; sourceTree = "<group>"; };
 		891FFDF9267B632500254B9C /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		8945F0E9267BE3150060BFB7 /* PlaceServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceServiceTests.swift; sourceTree = "<group>"; };
 		89A5A881267BADE400F94E95 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		89A5A886267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewControllerComposer.swift; sourceTree = "<group>"; };
 		89A5A88B267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPresenterInterface.swift; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 		89DA2D28267A1F7C004C740D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89DA2D2A267A1F7C004C740D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89DA2D2F267A1F7C004C740D /* PlaceOnMapAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceOnMapAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		89DA2D33267A1F7C004C740D /* PlaceOnMapAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOnMapAppTests.swift; sourceTree = "<group>"; };
+		89DA2D33267A1F7C004C740D /* NetworkloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkloaderTests.swift; sourceTree = "<group>"; };
 		89DA2D35267A1F7C004C740D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89DA2D3A267A1F7C004C740D /* PlaceOnMapAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceOnMapAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89DA2D3E267A1F7C004C740D /* PlaceOnMapAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOnMapAppUITests.swift; sourceTree = "<group>"; };
@@ -128,13 +130,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		891FFDA8267B275500254B9C /* NetworkTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetworkTests;
-			sourceTree = "<group>";
-		};
 		891FFDBC267B4AFC00254B9C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,8 +218,8 @@
 		89DA2D32267A1F7C004C740D /* PlaceOnMapAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				891FFDA8267B275500254B9C /* NetworkTests */,
-				89DA2D33267A1F7C004C740D /* PlaceOnMapAppTests.swift */,
+				89DA2D33267A1F7C004C740D /* NetworkloaderTests.swift */,
+				8945F0E9267BE3150060BFB7 /* PlaceServiceTests.swift */,
 				89DA2D35267A1F7C004C740D /* Info.plist */,
 			);
 			path = PlaceOnMapAppTests;
@@ -468,7 +463,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89DA2D34267A1F7C004C740D /* PlaceOnMapAppTests.swift in Sources */,
+				89DA2D34267A1F7C004C740D /* NetworkloaderTests.swift in Sources */,
+				8945F0EA267BE3150060BFB7 /* PlaceServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 import XCTest
 @testable import PlaceOnMapApp
 
-class PlaceOnMapAppTests: XCTestCase {
+class NetworkloaderTests: XCTestCase {
     
     
     var sut: NetworkLoader! // sut: system under test

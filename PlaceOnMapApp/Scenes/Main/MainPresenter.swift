@@ -28,14 +28,28 @@ class MainPresenter: MainPresenterInterface {
     
     func locationDidSelect(with coordinate: (lat: Double, long: Double)) {
         
+        placeService.getPlaces(with: coordinate) {[weak self] result in
+            guard let self = self else { return }
+            self.presentNextView()
+            switch result {
+            
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.delegate.alert(message: "Something went wrong please try again")
+                
+            case .success(let places):
+                
+                print(places.count)
+                self.presentNextView()
+            }
+            
+            
+        }
+    }
+    
+    private func presentNextView() {
         let (nav, view) = PlacesNavigationControllerComposer.makeModule()
         view.presenter.list = places
         self.delegate.present(next: nav)
-        return
-        placeService.getPlaces(with: coordinate) {[weak self] _ in
-            guard let self = self else { return }
-            let view = PlacesNavigationControllerComposer.makeModule().0
-            self.delegate.present(next: view)
-        }
     }
 }
