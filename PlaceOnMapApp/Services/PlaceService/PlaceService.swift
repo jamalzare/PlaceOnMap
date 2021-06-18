@@ -7,6 +7,8 @@
 
 import Foundation
 
+//chk commit
+
 class PlaceService: PlaceServiceProvider {
     
     let networkLoader: NetworkLoaderProvider
