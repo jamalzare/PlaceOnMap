@@ -6,50 +6,64 @@
 //
 
 import UIKit
-
-let places = [
-    
-    Place(name: "Washington"),
-    Place(name: "Los Angeles"),
-    Place(name: "Coupertino"),
-    Place(name: "Sillicon valley"),
-]
+import CoreLocation
 
 class MainPresenter: MainPresenterInterface {
     
     let placeService: PlaceServiceProvider
     weak var delegate: MainPresenterDelegate!
     
+    private var next: (UINavigationController, PlacesViewController)?
     
     init(placeService: PlaceServiceProvider) {
         
         self.placeService = placeService
     }
     
+    func viewDidLoad() {
+        if !CLLocationManager.locationServicesEnabled() {
+            delegate.alert(message: "Please check your Location service and your net connection")
+        }
+    }
+    
     func locationDidSelect(with coordinate: (lat: Double, long: Double)) {
         
-        placeService.getPlaces(with: coordinate) {[weak self] result in
-            guard let self = self else { return }
-            self.presentNextView()
-            switch result {
+        self.delegate.showPreloader()
+        
+        placeService.getPlaces(with: coordinate) { result in
             
-            case .failure(let error):
-                print(error.localizedDescription)
-                self.delegate.alert(message: "Something went wrong please try again")
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 
-            case .success(let places):
+                self.delegate.dismissPreloader()
                 
-                print(places.count)
                 self.presentNextView()
+                switch result {
+                
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    self.delegate.alert(message: "Something went wrong please check your connection or try later")
+                    
+                case .success(let places):
+                    
+                    print(places.count)
+                    self.presentNextView()
+                }
+                
             }
-            
-            
         }
     }
     
     private func presentNextView() {
-        let (nav, view) = PlacesNavigationControllerComposer.makeModule()
-        view.presenter.list = places
-        self.delegate.present(next: nav)
+        
+        if next == nil {
+            next = PlacesNavigationControllerComposer.makeModule()
+        }
+        
+        if let (nav, view) = next {
+            
+            view.presenter.list = places
+            self.delegate.present(next: nav)
+        }
     }
 }

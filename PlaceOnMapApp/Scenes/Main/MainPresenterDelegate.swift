@@ -13,5 +13,7 @@ protocol MainPresenterDelegate: class {
     
     func alert(message: String)
     func present(next view: UIViewController)
+    func showPreloader()
+    func dismissPreloader()
     
 }

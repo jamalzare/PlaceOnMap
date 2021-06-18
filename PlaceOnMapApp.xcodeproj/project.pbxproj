@@ -19,6 +19,9 @@
 		891FFDF5267B631000254B9C /* MainPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FFDF4267B631000254B9C /* MainPresenterDelegate.swift */; };
 		891FFDFA267B632500254B9C /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891FFDF9267B632500254B9C /* MainPresenter.swift */; };
 		8945F0EA267BE3150060BFB7 /* PlaceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945F0E9267BE3150060BFB7 /* PlaceServiceTests.swift */; };
+		894DF741267C70B100E8CCAB /* Preloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DF740267C70B100E8CCAB /* Preloader.swift */; };
+		894DF746267C70EC00E8CCAB /* PreloaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DF745267C70EC00E8CCAB /* PreloaderProvider.swift */; };
+		894DF74B267C7C1600E8CCAB /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DF74A267C7C1500E8CCAB /* MockData.swift */; };
 		89A5A882267BADE400F94E95 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A881267BADE400F94E95 /* PlaceDetailViewController.swift */; };
 		89A5A887267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A886267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift */; };
 		89A5A88C267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A88B267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift */; };
@@ -74,6 +77,9 @@
 		891FFDF4267B631000254B9C /* MainPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterDelegate.swift; sourceTree = "<group>"; };
 		891FFDF9267B632500254B9C /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		8945F0E9267BE3150060BFB7 /* PlaceServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceServiceTests.swift; sourceTree = "<group>"; };
+		894DF740267C70B100E8CCAB /* Preloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preloader.swift; sourceTree = "<group>"; };
+		894DF745267C70EC00E8CCAB /* PreloaderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderProvider.swift; sourceTree = "<group>"; };
+		894DF74A267C7C1500E8CCAB /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		89A5A881267BADE400F94E95 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		89A5A886267BADF400F94E95 /* PlaceDetailViewControllerComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewControllerComposer.swift; sourceTree = "<group>"; };
 		89A5A88B267BAE1700F94E95 /* PlaceDetailPresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPresenterInterface.swift; sourceTree = "<group>"; };
@@ -170,6 +176,15 @@
 				891FFDF9267B632500254B9C /* MainPresenter.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		894DF73F267C709400E8CCAB /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				894DF740267C70B100E8CCAB /* Preloader.swift */,
+				894DF745267C70EC00E8CCAB /* PreloaderProvider.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		89CE1550267B78C800EE596F /* PlaceDetail */ = {
@@ -282,7 +297,9 @@
 				89DA2D6F267A6040004C740D /* Images.swift */,
 				89F14837267A64ED00C382E4 /* Strings.swift */,
 				891FFDAE267B29FE00254B9C /* WebApies.swift */,
+				894DF73F267C709400E8CCAB /* CustomViews */,
 				89DA2D57267A24FF004C740D /* Extensions */,
+				894DF74A267C7C1500E8CCAB /* MockData.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -440,6 +457,7 @@
 				89DA2D1D267A1F76004C740D /* AppDelegate.swift in Sources */,
 				89DA2D59267A2555004C740D /* UIView+Ext.swift in Sources */,
 				89A5A896267BAE2900F94E95 /* PlaceDetailPresenter.swift in Sources */,
+				894DF74B267C7C1600E8CCAB /* MockData.swift in Sources */,
 				89A5A891267BAE2300F94E95 /* PlaceDetailPresenterDelegate.swift in Sources */,
 				89F14856267A70B800C382E4 /* NetworkLoaderProvider.swift in Sources */,
 				89DA2D1F267A1F76004C740D /* SceneDelegate.swift in Sources */,
@@ -447,8 +465,10 @@
 				89CE154C267B6ECF00EE596F /* PlacesPresenter.swift in Sources */,
 				89CE1537267B6C0400EE596F /* MainViewControllerComposer.swift in Sources */,
 				891FFDF5267B631000254B9C /* MainPresenterDelegate.swift in Sources */,
+				894DF746267C70EC00E8CCAB /* PreloaderProvider.swift in Sources */,
 				89CE153F267B6EA500EE596F /* PlacesPresenterInterface.swift in Sources */,
 				891FFDD9267B5C9500254B9C /* PlacesViewController.swift in Sources */,
+				894DF741267C70B100E8CCAB /* Preloader.swift in Sources */,
 				891FFDF0267B62FA00254B9C /* MainPresenterInterface.swift in Sources */,
 				89F14838267A64ED00C382E4 /* Strings.swift in Sources */,
 				891FFDC6267B552000254B9C /* ApiErroModel.swift in Sources */,
