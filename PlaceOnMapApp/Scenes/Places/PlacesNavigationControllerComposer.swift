@@ -10,7 +10,7 @@ import UIKit
 
 class PlacesNavigationControllerComposer {
     
-    static func makeModule() -> (UINavigationController, PlacesViewController) {
+    static func makeModule() -> (nav: UINavigationController, view: PlacesViewController) {
 
         let navigationControlller = UINavigationController()
         
