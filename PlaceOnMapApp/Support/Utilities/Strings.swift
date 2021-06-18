@@ -9,6 +9,7 @@ import Foundation
 
 struct Strings {
     
+    static let ok = "OK"
     static let confirm = "Confirm"
     static let dismiss = "Dismiss"
     static let placesTitle = "Nearby Places"

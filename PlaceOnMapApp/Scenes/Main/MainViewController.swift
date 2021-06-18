@@ -11,6 +11,7 @@ import MapKit
 class MainViewController: UIViewController {
     
     let presenter: MainPresenterInterface
+    let preloader: PreloaderProvider
     
     private let mapView = MKMapView()
     private let pinViewWidth: CGFloat = 40
@@ -35,9 +36,11 @@ class MainViewController: UIViewController {
     }()
     
     
-    init(presenter: MainPresenterInterface) {
+    init(presenter: MainPresenterInterface,
+         preloader: PreloaderProvider) {
         
         self.presenter = presenter
+        self.preloader = preloader
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -57,7 +60,7 @@ class MainViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        confirmBtnDidTap()
+        
     }
     
     private func setup() {
@@ -88,11 +91,26 @@ class MainViewController: UIViewController {
 extension MainViewController: MainPresenterDelegate {
     
     func alert(message: String) {
-        print("message")
+        
+        let alert = UIAlertController(title: "Message", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: Strings.ok, style: .default){ _ in }
+        
+        
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+           
     }
     
     func present(next view: UIViewController) {
         present(view, animated: true, completion: nil)
+    }
+    
+    func showPreloader() {
+        preloader.showLoading(on: view, message: "Loading...")
+    }
+    
+    func dismissPreloader() {
+        preloader.dismissLoading()
     }
 }
 

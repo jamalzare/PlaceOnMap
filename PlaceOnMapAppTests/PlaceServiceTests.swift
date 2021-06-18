@@ -67,32 +67,4 @@ class PlaceServiceTests: XCTestCase {
     }
     
     
-    func testResponseArray() throws {
-        
-        let promise = expectation(description: "Test Place service respone: response must be list of places")
-        
-        let coordinate = (lat: 38.897675, long: -77.036547)
-        
-        sut.getPlaces(with: coordinate) { result in
-            
-            
-            switch result {
-            
-            case .failure(let error):
-                
-                XCTFail("Error: \(error.localizedDescription)")
-                return
-                
-            case .success(let list):
-                if list.count>0 {
-                    promise.fulfill()
-                } else {
-                    XCTFail("List is empty")
-                }
-            }
-        }
-        
-        wait(for: [promise], timeout: 10)
-    }
-    
 }

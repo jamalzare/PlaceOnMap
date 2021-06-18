@@ -14,7 +14,8 @@ class MainViewControllerComposer {
         let networkLoader = NetworkLoader()
         let service = PlaceService(networkLoader: networkLoader)
         let presenter = MainPresenter(placeService: service)
-        let controller = MainViewController(presenter: presenter)
+        let preloader = Preloader()
+        let controller = MainViewController(presenter: presenter, preloader: preloader)
         
         presenter.delegate = controller
         
