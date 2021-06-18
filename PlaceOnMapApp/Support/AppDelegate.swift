@@ -7,15 +7,28 @@
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//        window = UIWindo
+//        window?.rootViewController = MainViewControllerComposer.makeModule()
+//        window?.makeKeyAndVisible()
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = UIViewController()
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        //let window = UIApplication.shared.keyWindow
+        window.makeKeyAndVisible()
+
+        let rootVC = MainViewControllerComposer.makeModule()
+        window.rootViewController = rootVC
+    
         return true
-    }
+    
+}
 
     // MARK: UISceneSession Lifecycle
 
