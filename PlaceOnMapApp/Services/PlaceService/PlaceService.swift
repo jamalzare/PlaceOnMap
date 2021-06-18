@@ -21,7 +21,7 @@ class PlaceService: PlaceServiceProvider {
 
         networkLoader.loadRequest(request: request,
                         identifier: "get places",
-                        timeout: 30) { result in
+                        timeout: 20) { result in
             
             switch result {
             

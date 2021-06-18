@@ -51,7 +51,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        
+        presenter.viewDidLoad()
     }
     
     override func viewDidLayoutSubviews() {

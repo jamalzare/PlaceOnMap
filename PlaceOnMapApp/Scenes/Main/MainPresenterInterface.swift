@@ -10,5 +10,6 @@ import Foundation
 
 protocol MainPresenterInterface {
     
+    func viewDidLoad()
     func locationDidSelect(with coordinate: (lat: Double, long: Double))
 }

@@ -6,14 +6,7 @@
 //
 
 import UIKit
-
-let places = [
-    
-    Place(name: "Washington"),
-    Place(name: "Los Angeles"),
-    Place(name: "Coupertino"),
-    Place(name: "Sillicon valley"),
-]
+import CoreLocation
 
 class MainPresenter: MainPresenterInterface {
     
@@ -27,6 +20,12 @@ class MainPresenter: MainPresenterInterface {
         self.placeService = placeService
     }
     
+    func viewDidLoad() {
+        if !CLLocationManager.locationServicesEnabled() {
+            delegate.alert(message: "Please check your Location service and your net connection")
+        }
+    }
+    
     func locationDidSelect(with coordinate: (lat: Double, long: Double)) {
         
         self.delegate.showPreloader()
@@ -38,7 +37,7 @@ class MainPresenter: MainPresenterInterface {
                 
                 self.delegate.dismissPreloader()
                 
-                //self.presentNextView()
+                self.presentNextView()
                 switch result {
                 
                 case .failure(let error):
