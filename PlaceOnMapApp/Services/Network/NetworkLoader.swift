@@ -33,7 +33,7 @@ public class NetworkLoader: NetworkLoaderProvider {
         
         task.resume()
         
-        // XCTAssertEqual(result, .success(data))
+     
     }
     
     public func completionHandler(data:Data?, response: URLResponse?, error: Error?, completion: Completion?, identifier: String?) {
@@ -49,7 +49,6 @@ public class NetworkLoader: NetworkLoaderProvider {
                                         errorKind: .invalidStatusCode(response.statusCode, data),
                                         identifier: identifier)))
            
-            print("error \(response.url?.path ?? ""): \(response.statusCode)")
             return
         }
         
