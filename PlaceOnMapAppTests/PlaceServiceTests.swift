@@ -27,4 +27,72 @@ class PlaceServiceTests: XCTestCase {
         try super.tearDownWithError()
     }
     
+    
+    func testCallBackIsCalled() throws {
+        
+        let promise = expectation(description: "Call back is Called for Place service")
+        
+        let coordinate = (lat: 38.897675, long: -77.036547)
+        
+        sut.getPlaces(with: coordinate) { result in
+            
+            promise.fulfill()
+        }
+        
+        wait(for: [promise], timeout: 10)
+    }
+    
+    func testResponseModel() throws {
+        
+        let promise = expectation(description: "Test Place service respone: response must be place array")
+        
+        let coordinate = (lat: 38.897675, long: -77.036547)
+        
+        sut.getPlaces(with: coordinate) { result in
+            
+            
+            switch result {
+            
+            case .failure(let error):
+                
+                XCTFail("Error: \(error.localizedDescription)")
+                return
+                
+            case .success(_):
+                    promise.fulfill()
+            }
+        }
+        
+        wait(for: [promise], timeout: 10)
+    }
+    
+    
+    func testResponseArray() throws {
+        
+        let promise = expectation(description: "Test Place service respone: response must be list of places")
+        
+        let coordinate = (lat: 38.897675, long: -77.036547)
+        
+        sut.getPlaces(with: coordinate) { result in
+            
+            
+            switch result {
+            
+            case .failure(let error):
+                
+                XCTFail("Error: \(error.localizedDescription)")
+                return
+                
+            case .success(let list):
+                if list.count>0 {
+                    promise.fulfill()
+                } else {
+                    XCTFail("List is empty")
+                }
+            }
+        }
+        
+        wait(for: [promise], timeout: 10)
+    }
+    
 }
